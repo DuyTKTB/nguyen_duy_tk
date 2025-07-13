@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tk - Nguyễn Duy TK Nè </title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-ring"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <div class="nav-logo">
+                <div class="logo-container">
+                    <div class="logo-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <span class="logo-text">NGUYỄN DUY TK</span>
+                </div>
+            </div>
+
+            <!-- Navigation Menu -->
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">
+                        <i class="fas fa-home"></i>
+                        <span>Trang chủ</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">
+                        <i class="fas fa-user"></i>
+                        <span>Giới thiệu</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">
+                        <i class="fas fa-cogs"></i>
+                        <span>Kỹ năng</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Dự án</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Liên hệ</span>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Smart Chatbot -->
+    <div class="chatbot-container" id="chatbot">
+        <div class="chatbot-button" id="chatbot-toggle">
+            <div class="bot-avatar">
+                <i class="fas fa-robot"></i>
+                <div class="pulse-ring"></div>
+            </div>
+            <div class="new-message-indicator" id="new-message"></div>
+        </div>
+
+        <div class="chatbot-window" id="chatbot-window">
+            <div class="chatbot-header">
+                <div class="bot-info">
+                    <div class="bot-avatar-small">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="bot-details">
+                        <h4>TK BOT CỦA CHÚNG TA</h4>
+                        <span class="bot-status">
+                            <span class="status-dot"></span>
+                            Đang online
+                        </span>
+                    </div>
+                </div>
+                <button class="chatbot-close" id="chatbot-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="chatbot-messages" id="chatbot-messages">
+                <div class="message bot-message">
+                    <div class="message-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="message-content">
+                        <p>Xin chào! 👋 Tôi là TK Assistant. Tôi có thể giúp bạn tìm hiểu về dịch vụ của Nguyễn Duy TK.</p>
+                        <span class="message-time">Vừa xong</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chatbot-quick-replies" id="quick-replies">
+                <div class="quick-reply-item" data-reply="web-development">
+                    <i class="fas fa-code"></i>
+                    <span>Phát triển website</span>
+                </div>
+                <div class="quick-reply-item" data-reply="ui-design">
+                    <i class="fas fa-paint-brush"></i>
+                    <span>Thiết kế UI/UX</span>
+                </div>
+                <div class="quick-reply-item" data-reply="music-programming">
+                    <i class="fas fa-music"></i>
+                    <span>Lập trình âm nhạc</span>
+                </div>
+                <div class="quick-reply-item" data-reply="consulting">
+                    <i class="fas fa-comments"></i>
+                    <span>Tư vấn công nghệ</span>
+                </div>
+            </div>
+
+            <div class="chatbot-input-container">
+                <div class="chatbot-input">
+                    <input type="text" id="chatbot-message-input" placeholder="Nhập tin nhắn của bạn...">
+                    <button class="send-button" id="send-message">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+                <div class="typing-indicator" id="typing-indicator">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-container">
+        <!-- Animated background elements -->
+        <div class="background-effects">
+            <div class="floating-circle circle-1"></div>
+            <div class="floating-circle circle-2"></div>
+            <div class="floating-circle circle-3"></div>
+            <div class="floating-circle circle-4"></div>
+        </div>
+
+        <div class="content-wrapper">
+            <!-- Header -->
+            <header id="home" class="header-section">
+                <div class="modern-logo">
+                    <div class="logo-decoration">
+                        <div class="logo-ring"></div>
+                        <div class="logo-core">
+                            <span class="logo-letter">TRIP</span>
+                            <span class="logo-letter">KILL</span>
+                        </div>
+                        <div class="logo-particles">
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                            <div class="particle"></div>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="main-title">Nguyễn Duy TK</h1>
+                <p class="main-subtitle">Nghệ sĩ công nghệ • Developer • Music Creator</p>
+                <div class="title-underline"></div>
+            </header>
+
+            <!-- Avatar and Introduction -->
+            <section id="about" class="intro-section">
+                <div class="intro-card">
+                    <!-- Avatar -->
+                    <div class="avatar-container">
+                        <div class="avatar">
+                            <img src="/img/z6690197937354_2d701759cdf25d68f5542f8421862af2.jpg" 
+                                 alt="Nguyễn Duy TK" class="avatar-image">
+                            <div class="avatar-status"></div>
+                        </div>
+                    </div>
+
+                    <!-- Introduction Text -->
+                    <div class="intro-text">
+                        <p class="intro-paragraph">
+                            Nguyễn Duy TK là một chuyên gia công nghệ trẻ đầy nhiệt huyết, nổi bật với khả năng lập trình chuyên sâu, 
+                            thiết kế giao diện hiện đại, và đặc biệt là sáng tạo âm nhạc kết hợp lập trình. Với tư duy logic, 
+                            gu thẩm mỹ tinh tế và tư duy sáng tạo vượt khuôn mẫu, Nguyễn Duy TK không chỉ là một developer, 
+                            mà còn là một nghệ sĩ công nghệ đúng nghĩa.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="skills-section">
+                <h3 class="section-title">
+                    <span class="title-icon">⚡</span>
+                    Kỹ Năng Chuyên Môn
+                    <span class="title-decoration"></span>
+                </h3>
+                <div class="skills-grid">
+                    <div class="skill-card programming">
+                        <div class="card-header">
+                            <div class="skill-icon">🔧</div>
+                            <h4 class="skill-title">Lập trình</h4>
+                        </div>
+                        <p class="skill-description">Fullstack development từ backend Flask đến frontend UI/UX</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">HTML/CSS</span>
+                            <span class="skill-tag">Lua (Roblox)</span>
+                            <span class="skill-tag">C# (Unity)</span>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+
+                    <div class="skill-card design">
+                        <div class="card-header">
+                            <div class="skill-icon">🎨</div>
+                            <h4 class="skill-title">Thiết kế</h4>
+                        </div>
+                        <p class="skill-description">Thiết kế giao diện hiện đại, tối ưu trải nghiệm người dùng</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">UI/UX Design</span>
+                            <span class="skill-tag">Dashboard Design</span>
+                            <span class="skill-tag">Dark Mode</span>
+                            <span class="skill-tag">Responsive Design</span>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+
+                    <div class="skill-card music">
+                        <div class="card-header">
+                            <div class="skill-icon">🎵</div>
+                            <h4 class="skill-title">Âm nhạc & Code</h4>
+                        </div>
+                        <p class="skill-description">Kết hợp âm nhạc với công nghệ, tạo trải nghiệm mới lạ</p>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Music Programming</span>
+                            <span class="skill-tag">DAW</span>
+                            <span class="skill-tag">MIDI</span>
+                            <span class="skill-tag">Interactive Audio</span>
+                            <span class="skill-tag">Sound Effects</span>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="projects-section">
+                <h3 class="section-title">
+                    <span class="title-icon">🚀</span>
+                    Dự Án Nổi Bật
+                    <span class="title-decoration"></span>
+                </h3>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <h4 class="project-title">Web Applications</h4>
+                        </div>
+                        <p class="project-description">Phát triển nhiều dự án web-app với giao diện hiện đại</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <i class="fab fa-facebook"></i>
+                            </div>
+                            <h4 class="project-title">Facebook Management Tool</h4>
+                        </div>
+                        <p class="project-description">Phần mềm quản lý nick Facebook chuyên nghiệp</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">Automation</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon">
+                                <i class="fas fa-gamepad"></i>
+                            </div>
+                            <h4 class="project-title">3D Games</h4>
+                        </div>
+                        <p class="project-description">Game 3D trên Roblox và Unity với yếu tố âm thanh tương tác</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Unity</span>
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">Roblox</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Mission Statement -->
+            <section class="mission-section">
+                <div class="mission-card">
+                    <div class="mission-header">
+                        <div class="mission-icon">💡</div>
+                        <h3 class="mission-title">Sứ Mệnh</h3>
+                    </div>
+                    <p class="mission-text">
+                        Mang lập trình và sáng tạo đến gần với mọi người – biến ý tưởng thành sản phẩm thực tế, 
+                        và luôn đi đầu trong việc kết hợp công nghệ với nghệ thuật.
+                    </p>
+                    <p class="mission-highlight">
+                        Nếu bạn cần một lập trình viên tài năng, một designer sáng tạo, hoặc một người có thể lập trình cả âm nhạc, 
+                        thì Nguyễn Duy TK chính là cái tên bạn nên nhớ đến đầu tiên.
+                    </p>
+                    <blockquote class="mission-quote">
+                        <div class="quote-decoration">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="quote-text">
+                            Code là ngôn ngữ của logic. Âm nhạc là ngôn ngữ của cảm xúc. 
+                            Khi cả hai hòa quyện, bạn có thể tạo ra điều kỳ diệu.
+                        </p>
+                        <footer class="quote-author">— Nguyễn Duy TK</footer>
+                    </blockquote>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="contact-section">
+                <div class="contact-content">
+                    <h3 class="contact-title">Sẵn sàng hợp tác?</h3>
+                    <p class="contact-description">Hãy cùng tạo ra những điều kỳ diệu với công nghệ và sáng tạo!</p>
+                    <button class="contact-button" onclick="handleContact()">
+                        <span class="button-text">Liên Hệ Hợp Tác</span>
+                        <i class="fas fa-paper-plane button-icon"></i>
+                    </button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
